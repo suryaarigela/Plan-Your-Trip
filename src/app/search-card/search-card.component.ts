@@ -27,7 +27,7 @@ loading=false
        origin: new FormControl('',Validators.required),
        destination: new FormControl('',Validators.required),
        departureDate: new FormControl('',Validators.required),
-       arrivalDate: new FormControl('',Validators.required),
+       arrivalDate: new FormControl(''),
     });
   }
 

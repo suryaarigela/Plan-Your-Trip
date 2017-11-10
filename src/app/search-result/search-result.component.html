@@ -26,16 +26,35 @@
  				<th>Total Fare</th>
  				<th>Duration</th>
  			</tr>
- 			<tr *ngFor="let item of root.data.onwardflights | paginate:{itemsPerPage:4, currentPage:p} ">
+ 			<tr on-mouseover='changeMe(item)'  *ngFor="let item of root.data.onwardflights | paginate:{itemsPerPage:4, currentPage:p} ">
  				<td>{{item.origin}}</td>
  				<td>{{item.destination}}</td>
  				<td>{{item.seat}}</td>
  				<td>{{item.fare.totalfare}}</td>
  				<td>{{item.duration}}</td>
+			
  			</tr>
  		</body>
  	</table>
 	 <pagination-controls (pageChange)="p =$event"></pagination-controls>
  </section>
   <button [routerLink]=" ['/'] ">Plan your trip</button>
+ </div>
+ <div id="details" *ngIf="showDetail">
+	 <table >
+ 	<body>
+		 <p>Pickup Points</p>
+ 			<tr>
+ 				<th>Time</th><th>Land Mark</th><th>Location</th>
+ 			
+ 			</tr>
+ 			<tr  *ngFor="let lis of list ">
+ 				<td>{{lis.BPTime}}</td>	
+				 <td>{{lis.BPLandmark}}</td>	
+				 <td>{{lis.BPLocation}}</td>	
+ 			</tr>
+ 		</body>
+ 	</table>
+	
+	
  </div>

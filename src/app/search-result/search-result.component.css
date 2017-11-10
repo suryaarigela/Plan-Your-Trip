@@ -53,6 +53,11 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+tr:nth-child(odd) {
+    background-color: #6699ff;
+}
+
+
 #result {
   position: absolute;
   width: 500px;
@@ -63,3 +68,16 @@ tr:nth-child(even) {
   margin: -100px 0 0 -150px;
  
 }
+
+#details {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  z-index: 15;
+  top: 32%;
+  left: 75%;
+  margin: -100px 0 0 -150px;
+ border-style: solid;
+ overflow:scroll; height:200px;
+}
+
